@@ -13,8 +13,10 @@
 # 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否
 # 则返回 -1。
 
+
 class Solution:
-    def search(self, nums, target):
+    # 方法一：左闭右闭
+    def search_1(self, nums, target):
         left = 0
         right = len(nums) - 1
 
@@ -28,6 +30,25 @@ class Solution:
                 left = middle + 1
         return -1
 
+    # 方法2：左闭右开
+    def search_2(self, nums, target):
+        left = 0
+        right = len(nums)
+        while left < right:
+            middle = (left + right) // 2
+            if nums[middle] == target:
+                return middle
+            elif nums[middle] > target:
+                right = middle
+            else:
+                left = middle + 1   # target 在右边区间
+        return -1
+
 a = Solution()
-temp = a.search([-1,2,3,4,5,6,7,10,12],5)
-print(temp)
+temp_1 = a.search_1([-1,2,3,4,5,6,7,10,12],5)
+print("temp_1:",temp_1)
+
+temp_2 = a.search_2([-1,0,3,5,9,12],2)
+print("temp_2:",temp_2)
+
+
