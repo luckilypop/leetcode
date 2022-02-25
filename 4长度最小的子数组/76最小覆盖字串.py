@@ -59,5 +59,5 @@ class Solution:
         return res
 if __name__ == '__main__':
     a = Solution()
-    temp = a.minWindow("ADOBECODEBANC","ABC")
+    temp = a.minWindow("DOBECODEBANC","ABC")
     print("temp:", temp)
