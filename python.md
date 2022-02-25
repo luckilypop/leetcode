@@ -9,4 +9,5 @@
 5. @classmethod
 6. 排序算法
 7. 元组，pop和remove不同之处，904
+8. python定义单链表
 
