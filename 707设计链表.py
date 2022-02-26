@@ -23,24 +23,10 @@ class MyLinkedList:
     def __init__(self):
         self._head = Node(0)  # 虚拟头部节点
         self._count = 0  # 添加的节点数
-    def initList(self, data):
-        # data 不为空时候，创建头结点
-        while data:
-            # 创建头节点
-            self.head = Node(data[0])
-            r = self.head  # 头结点
-            p = self.head  # 指针
-            # p作为指针，逐个为 data 内的数据创建结点, 建立链表
-            for i  in data[1:]:
-                node = Node(i)
-                p.next = node
-                p = p.next
-            return r
 
+
+    # get(index)：获取链表中第 index 个节点的值。如果索引无效，则返回-1。
     def get(self, index):
-        """
-        Get the value of the index-th node in the linked list. If the index is invalid, return -1.
-        """
         if 0 <= index < self._count:
             node = self._head
             for _ in range(index + 1):
@@ -49,28 +35,25 @@ class MyLinkedList:
         else:
             return -1
 
+
+    # addAtHead(val)：在链表的第一个元素之前添加一个值为 val 的节点。插入后，新节点将成为链表的第一个节点。
     def addAtHead(self, val):
-        """
-        Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
-        """
         self.addAtIndex(0, val)
 
+    # addAtTail(val)：将值为 val 的节点追加到链表的最后一个元素。
     def addAtTail(self, val):
-        """
-        Append a node of value val to the last element of the linked list.
-        """
         self.addAtIndex(self._count, val)
 
+    # addAtIndex(index,val)：在链表中的第 index 个节点之前添加值为 val  的节点。
+    # 如果 index 等于链表的长度，则该节点将附加到链表的末尾。
+    # 如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。
     def addAtIndex(self, index, val):
-        """
-        Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
-        """
         if index < 0:
             index = 0
         elif index > self._count:
             return
 
-        # 计数累加
+            # 计数累加
         self._count += 1
 
         add_node = Node(val)
@@ -80,29 +63,39 @@ class MyLinkedList:
         else:
             prev_node.next, add_node.next = add_node, current_node
 
+    # deleteAtIndex(index)：如果索引 index 有效，则删除链表中的第 index 个节点。
     def deleteAtIndex(self, index):
-        """
-        Delete the index-th node in the linked list, if the index is valid.
-        """
-        if 0 <= index < self._count:
-            # 计数-1
+        if 0<= index < self._count:
+            # 计数减一
             self._count -= 1
             prev_node, current_node = None, self._head
             for _ in range(index + 1):
                 prev_node, current_node = current_node, current_node.next
             else:
-                prev_node.next, current_node.next = current_node.next, None
+                prev_node.next, current_node.next = current_node, current_node.next
 
 
 
 
 if __name__ == '__main__':
     a = MyLinkedList()
+    a.addAtIndex(0,1)
+    a.addAtIndex(1,2)
+    a.addAtIndex(2,3)
 
-    a.initList([1,2,3])
-    node = a.head
-    re = []
-    while node != None:
-        re.append(node.val)
-        node = node.next
-    print(re)
+    cur = a._head
+    res = []
+    while cur:
+        res.append(cur.val)
+        cur = cur.next
+    print("add之后：",res)
+
+    a.addAtHead(5)
+    a.addAtTail(7)
+    print(a.get(3))
+    cur = a._head
+    res = []
+    while cur:
+        res.append(cur.val)
+        cur = cur.next
+    print("add之后：", res)

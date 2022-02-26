@@ -39,7 +39,6 @@ class Linklist:  # 封装链表相关
     # 打印单链表
     def printList(self, head):
         cur = head
-        print(cur)
         res = []
         while cur:
             res.append(cur.val)
@@ -78,13 +77,13 @@ class Solution:
 if __name__ == '__main__':
     # 实例化单链表
     a = Linklist()
-    data = []
+    data = [2,3,6,1,2]
     # 数组转换为单链表ll
-    ll = a.initList(data)
+   #  ll = a.initList(data)
     # 初始化类
     b = Solution()
     # 调用函数，ll为单链表，结果temp也为单链表
-    temp = b.removeElements_2(ll,6)
+    temp = b.removeElements_2(a.initList(data),6)
     # 打印temp单链表的值
     print(a.printList(temp))
 
