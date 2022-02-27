@@ -8,6 +8,8 @@
 # @Software: PyCharm
 
 '''
+# 题目
+# 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
