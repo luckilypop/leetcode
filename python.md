@@ -12,4 +12,5 @@
 8. python定义单链表
 9. 栈和队列
 10. deque
+11. ans = int(eval(f'{temp2} {item} {temp1}')) eval??
 
