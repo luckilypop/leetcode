@@ -29,5 +29,5 @@ class Solution:
 
 if __name__ == '__main__':
     a = Solution()
-    temp = a.totalFruit([1,2,3,2,2])
+    temp = a.totalFruit([1,1,1,2,2,3,2,2,1])
     print("temp:", temp)
