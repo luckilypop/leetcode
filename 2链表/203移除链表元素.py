@@ -30,7 +30,7 @@ class Linklist:  # 封装链表相关
             r = self.head  # 头结点
             p = self.head  # 指针
             # p作为指针，逐个为 data 内的数据创建结点, 建立链表
-            for i  in data[1:]:
+            for i in data[1:]:
                 node = ListNode(i)
                 p.next = node
                 p = p.next

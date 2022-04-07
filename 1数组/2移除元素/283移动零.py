@@ -29,7 +29,4 @@ class Solution:
             # nums.pop() #模拟栈的弹出
         return nums
 
-if __name__ == '__main__':
-    a = Solution()
-    temp = a.moveZeroes([1,2,0,0,4,0])
-    print("temp:", temp)
+

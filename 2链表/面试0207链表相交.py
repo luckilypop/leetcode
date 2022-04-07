@@ -8,6 +8,7 @@
 # @Software: PyCharm
 
 '''
+
 class Solution:
     def getIntersectionNode(self, headA, headB):
         curA = headA
@@ -56,3 +57,5 @@ class Solution:
             cur_b = cur_b.next if cur_b else headA  # 同理，b走完了就切换到a
 
         return cur_a
+
+

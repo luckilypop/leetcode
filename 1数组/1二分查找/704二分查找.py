@@ -44,11 +44,6 @@ class Solution:
                 left = middle + 1   # target 在右边区间
         return -1
 
-a = Solution()
-temp_1 = a.search_1([-1,2,3,4,5,6,7,10,12],5)
-print("temp_1:",temp_1)
 
-temp_2 = a.search_2([-1,0,3,5,9,12],2)
-print("temp_2:",temp_2)
 
 

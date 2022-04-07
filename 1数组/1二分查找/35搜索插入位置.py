@@ -43,11 +43,4 @@ class Solution:
             else:
                 right = middle
         return right # 结果是right
-
-
-a = Solution()
-temp_1 = a.searchInsert_1([-1,2,3,4,5,6,7,10,12],5)
-print("temp_1:",temp_1)
-
-temp_2 = a.searchInsert_2([-1,0,3,5,9,12],2)
-print("temp_2:",temp_2)
+367

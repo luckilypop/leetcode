@@ -20,6 +20,7 @@ class Solution:
             #   sorted(s) = 'a' 'e' 't'
             keys = "".join(sorted(s))
 
+
             if keys not in dic:
                 dic[keys] = [s]
             else:

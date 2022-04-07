@@ -9,7 +9,3 @@
 
 '''
 
-if __name__ == '__main__':
-    a = Solution()
-    temp = a.
-    print(temp)

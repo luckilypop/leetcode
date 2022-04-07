@@ -27,7 +27,3 @@ class Solution:
     def backspaceCompare(self, s, t):
         return self.get_string(s) == self.get_string(t)
 
-if __name__ == '__main__':
-    a = Solution()
-    temp = a.backspaceCompare('abc', 'abb#c')
-    print("temp:", temp)

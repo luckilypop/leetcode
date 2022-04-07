@@ -32,18 +32,17 @@ class Solution:
             return [-1, -1]
         else:
             left, right = temp, temp
+
+            # 寻找右边界
             for i in range(temp + 1, len(nums)):
                 if nums[i] == target:
                     right = i
                 else:
                     break
+            # 寻找左边界
             for i in range(temp - 1, -1, -1):
                 if nums[i] == target:
                     left = i
                 else:
                     break
         return [left, right]
-if __name__ == '__main__':
-    a = Solution()
-    temp = a.searchRange([1,2,2],2)
-    print(temp)

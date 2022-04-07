@@ -15,8 +15,6 @@
 class Solution:
     def isAnagram(self, s, t):
         record = [0] * 26
-        print(record)
-
         for i in range(len(s)):
             record[ord(s[i]) - ord('a')] += 1
         for i in range(len(t)):

@@ -28,7 +28,3 @@ class Solution:
                 right = mid - 1
         return False
 
-if __name__ == '__main__':
-    a = Solution()
-    temp = a.isPerfectSquare(16)
-    print("temp:",temp)

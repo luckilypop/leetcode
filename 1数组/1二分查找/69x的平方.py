@@ -28,7 +28,3 @@ class Solution:
                 return mid
         return right
 
-if __name__ == '__main__':
-    a = Solution()
-    temp = a.mySqrt(15)
-    print("temp:",temp)

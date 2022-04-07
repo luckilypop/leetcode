@@ -17,7 +17,7 @@ class Solution:
             if target - val not in record:
                 record[val] = idx
             else:
-                print(record)
+
                 return [record[target - val], idx]
 if __name__ == '__main__':
     a = Solution()
