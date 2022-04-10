@@ -5,7 +5,7 @@
 '''
 # @Time    : 2022/4/8 13:15
 # @Author  : yq
-# @File    : 376摆动序列.py
+# @File    : 2-376摆动序列.py
 # @Software: PyCharm
 
 '''
